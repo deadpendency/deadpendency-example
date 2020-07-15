@@ -1,0 +1,8 @@
+#!/bin/bash
+set -Eexuo pipefail
+
+cd "$(dirname "$0")"/.. || exit
+
+docker-compose pull dev
+
+docker-compose run --rm dev "$@"

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dev:
+    image: node:latest
+    command: bash
+    volumes:
+      - .:/work
+    working_dir: /work

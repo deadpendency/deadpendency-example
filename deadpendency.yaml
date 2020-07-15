@@ -1,0 +1,24 @@
+additional-deps:
+   javascript:
+     - underscore
+     - repo: deadpendency/an-archived-repo
+     - repo: deadpendency/jquery-fork
+       name: jquery
+
+ignore-failures:
+  - react-dom
+
+additional-dependency-files:
+  - path: other-package.json
+    type: npm-package-json
+
+rules-config:
+  no-recent-package-release:
+    warn-at-months: 6
+    fail-at-months: 12
+  no-recent-commit:
+    warn-at-months: 6
+    fail-at-months: 9
+  few-yearly-commits:
+    warn-at-count: 10
+    fail-at-count: 4
