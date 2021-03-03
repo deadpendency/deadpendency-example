@@ -15,10 +15,16 @@ additional-dependency-files:
 rules-config:
   no-recent-package-release:
     warn-at-months: 6
-    fail-at-months: 12
+    # fail-at-months: 24 omitted to use the default
   no-recent-commit:
     warn-at-months: 6
     fail-at-months: 9
-  few-yearly-commits:
-    warn-at-count: 10
-    fail-at-count: 4
+  few-yearly-commits: disabled # disable this one entirely
+
+  single-recent-author: fail # normally this will just warn, but we want it to fail the check
+
+  # these defaults are fine, so we don't change them
+
+  # repository-archived: fail
+  # repository-is-fork: warn
+  # package-deprecated: fail
