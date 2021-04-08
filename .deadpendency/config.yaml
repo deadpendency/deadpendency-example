@@ -6,7 +6,8 @@ additional-deps:
        name: jquery
 
 ignore-failures:
-  - react-dom
+  javascript:
+    - react-dom
 
 additional-dependency-files:
   - path: other-package.json
